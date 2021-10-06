@@ -20,6 +20,9 @@ class HomePage extends GetWidget<HomeViewModel> {
       backgroundColor: Color(0xFF171717),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
+        backgroundColor: Colors.white.withOpacity(0.1),
+        inactiveColor: Colors.white,
+        activeColor: GradientColors.colorfulPeach.first,
         icons: [
           FontAwesomeIcons.home,
           FontAwesomeIcons.shapes,
