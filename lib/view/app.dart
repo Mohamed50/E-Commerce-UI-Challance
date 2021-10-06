@@ -19,8 +19,11 @@ class App extends StatelessWidget {
         appBarTheme: AppBarTheme(
           elevation: 0,
           backgroundColor: Color(0xFF171717),
+          textTheme: GoogleFonts.rationaleTextTheme(
+            Theme.of(context).textTheme,
+          ),
         ),
-        textTheme: GoogleFonts.sourceSansProTextTheme(
+        textTheme: GoogleFonts.rationaleTextTheme(
           Theme.of(context).textTheme,
         ),
       ),

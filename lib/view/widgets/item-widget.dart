@@ -34,10 +34,10 @@ class ItemWidget extends StatelessWidget {
           ),
           Positioned(
             right: -30.0,
+            child: Hero(
+              tag: 'image ${item.images}',
             child: Transform.rotate(
               angle: -pi * 30 / 180,
-              child: Hero(
-                tag: 'image ${item.images}',
                 child: CachedNetworkImage(
                   height: 400.0,
                   width: 300,

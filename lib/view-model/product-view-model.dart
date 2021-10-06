@@ -1,4 +1,5 @@
 import 'package:charachters_app/data/item.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ProductViewModel extends GetxController{
@@ -23,7 +24,7 @@ class ProductViewModel extends GetxController{
 
   void addToCart(){
     Get.back();
-    Get.snackbar(item.name, "Added to cart");
+    Get.snackbar(item.name, "Added to cart", colorText: Colors.white);
   }
 
 
