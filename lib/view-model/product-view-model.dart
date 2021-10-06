@@ -21,5 +21,10 @@ class ProductViewModel extends GetxController{
     _selectedSizeIndex.value = index;
   }
 
+  void addToCart(){
+    Get.back();
+    Get.snackbar(item.name, "Added to cart");
+  }
+
 
 }

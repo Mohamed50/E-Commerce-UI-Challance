@@ -189,28 +189,31 @@ class DetailsPage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(12.0),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16.0),
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    colors: item.colors,
-                  )),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(
-                    FontAwesomeIcons.cartPlus,
-                    color: Colors.white,
-                  ),
-                  CustomText(
-                    "Add to cart",
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ],
+            child: InkWell(
+              onTap: Get.find<ProductViewModel>().addToCart,
+              child: Container(
+                padding: EdgeInsets.all(12.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16.0),
+                    gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: item.colors,
+                    )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.cartPlus,
+                      color: Colors.white,
+                    ),
+                    CustomText(
+                      "Add to cart",
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
